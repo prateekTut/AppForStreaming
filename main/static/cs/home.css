@@ -1,4 +1,11 @@
 /* home.css */
+body {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  font-family: Verdana, sans-serif;
+  min-height: 100vh;
+}
 #intro {
   background-color: #ffffff;
   padding: 40px;
@@ -57,7 +64,7 @@
 }
 
 .video-card {
-  width: 23%;
+  width: 33%;
   margin: 1%;
   float: left;
   background-color: #f9f9f9;
@@ -147,5 +154,5 @@
 }
 
 #id_comments {
-  min-width: 250px;
+  min-width: 310px;
 }
