@@ -7,11 +7,16 @@ from django.contrib.auth import get_user_model
 from django.views.decorators.http import require_POST
 from django.http import JsonResponse
 from django.contrib.auth import logout
+from django.contrib.auth.decorators import login_required
+
 
 
 User = get_user_model()
+
+@login_required
 def home(request):
     return render(request, 'Home.html')
+
 
 def login_view(request):
     if request.method == 'POST':
@@ -61,7 +66,7 @@ def signup_view(request):
 
 def logout_view(request):
     logout(request)
-    return redirect('home')
+    return redirect('login')
 
 
 @require_POST
@@ -111,4 +116,4 @@ def add_rating(request, post_id):
 def custom_logout_view(request):
     logout(request)
     # Redirect to a specific URL after logout (if needed)
-    return redirect('home')  # Replace 'home' with the URL name of your homepage
+    return redirect('login')  # Replace 'home' with the URL name of your homepage
