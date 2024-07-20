@@ -1,14 +1,12 @@
 {% load static %}
 <!DOCTYPE html>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Videozz - Home</title>
-    <link rel="stylesheet" href="{% static 'cs/styles.css' %}" />
+    <title>video Streamer - Home</title>
     <link rel="stylesheet" href="{% static 'cs/home.css' %}" />
+    <link rel="stylesheet" href="{% static 'cs/styles.css' %}" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -16,36 +14,52 @@
   </head>
   <body>
     <header>
-      <div class="logo"><i class="fas fa-play-circle"></i> Videozz</div>
+      <div class="logo"><i class="fas fa-play-circle"></i> video Streamer</div>
       <nav>
         <a href="{% url 'signup' %}"
           ><i class="fas fa-user-plus"></i> Sign Up</a
         >
         {% if user.is_authenticated %}
-
-        <a href="{% url 'logout' %}"><i class="fas fa-user-plus"></i> Logout</a>
+        <a href="{% url 'logout' %}"
+          ><i class="fas fa-sign-out-alt"></i> Logout</a
+        >
         {% else %}
         <a href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> Login</a>
         {% endif %}
       </nav>
     </header>
 
-    <div class="container">
-      <section id="intro">
-        <h1>Welcome to Videozz</h1>
-        <p>Discover and enjoy videos from various categories.</p>
-        <img
-          src="{% static '/images/newLanding.jpg' %}"
-          alt="Videozz Introduction"
-        />
-      </section>
+    <div class="hero">
+      <h1>Welcome to Video Streamer</h1>
+      <p>Discover and enjoy videos from various categories.</p>
+      <a href="#categories" class="cta-button">Explore Now</a>
+    </div>
 
+    <div class="container">
       <section id="about">
-        <h2><i class="fas fa-info-circle"></i> About Videozz</h2>
-        <p>
-          Videozz is a premium video streaming platform that offers a wide range
-          of content across multiple categories.
-        </p>
+        <h2><i class="fas fa-info-circle"></i> About Video Streamer</h2>
+        <div class="card-container">
+          <div class="card">
+            <i class="fas fa-film"></i>
+            <h3>Diverse Content</h3>
+            <p>Explore a wide range of videos across multiple genres.</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-heart"></i>
+            <h3>Personalized Experience</h3>
+            <p>Enjoy content tailored to your preferences.</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Watch Anywhere</h3>
+            <p>Stream on any device, anytime, anywhere.</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-users"></i>
+            <h3>Community</h3>
+            <p>Connect with other viewers and share your thoughts.</p>
+          </div>
+        </div>
       </section>
 
       <section id="categories">
@@ -62,9 +76,30 @@
     </div>
 
     <footer>
-      <p>&copy; 2024 Videozz. All rights reserved.</p>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Video Streamer. All rights reserved.</p>
+      </div>
     </footer>
-
     <template id="video-card-template">
       <div class="video-card">
         <iframe
@@ -121,7 +156,6 @@
         </div>
       </div>
     </template>
-
     {% comment %}
     <script>
       $(document).ready(function () {
@@ -185,7 +219,7 @@
         });
       });
     </script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{% static 'js/script.js' %}"></script>
   </body>
 </html>

@@ -4,78 +4,84 @@ document.addEventListener("DOMContentLoaded", function () {
   const videoContainer = document.getElementById("video-container");
   const videoCardTemplate = document.getElementById("video-card-template");
 
-  const categories = ["Action", "Comedy", "Drama", "Documentary"];
+  const categories = [
+    "Python",
+    "Datascience",
+    "MachineLearning",
+    "WebDevelelopment",
+  ];
+
   const videoData = {
-    Action: [
+    Python: [
       {
-        title: "Epic Car Chase",
-        src: "https://www.youtube.com/embed/6XMuUVw7TOM",
+        title: "Python for beginners",
+        src: "https://www.youtube.com/embed/kqtD5dpn9C8?si=nh-xhXsZj8bDDYSz",
       },
       {
-        title: "Superhero Battle",
-        src: "https://www.youtube.com/embed/FkTybqcX-Yo",
+        title: "Django in 1 hour",
+        src: "https://www.youtube.com/embed/rHux0gMZ3Eg?si=ygbTBNw9wwehBLNV",
       },
       {
-        title: "Convict",
-        src: "https://www.youtube.com/embed/ySL7P-lYPvc?si=AHA2nwrOpKHl9zvG",
+        title: "Python full course",
+        src: "https://www.youtube.com/embed/XKHEtdqhLK8?si=WmxAUnyjobdbvVSv",
       },
       {
-        title: "Martial Arts Showdown",
-        src: "https://www.youtube.com/embed/M7XM597XO94",
-      },
-    ],
-    Comedy: [
-      {
-        title: "Hilarious Misunderstanding",
-        src: "https://www.youtube.com/embed/kn271kr_ks0",
-      },
-      {
-        title: "Office Pranks Gone Wild",
-        src: "https://www.youtube.com/embed/1aHtJZXqgU4",
-      },
-      {
-        title: "Awkward First Date",
-        src: "https://www.youtube.com/embed/rxUm-2x-2dM?si=jmhrWgy5nNmkO3Dx",
-      },
-      {
-        title: "Comedy",
-        src: "https://www.youtube.com/embed/-hX89noO_2U?si=rAzkNWqXfrhzZf9N",
+        title: "Automated movie editing with movie.py",
+        src: "https://www.youtube.com/embed/Q2d1tYvTjRw?si=6qPocMJlhcNsG1-F",
       },
     ],
-    Drama: [
+    Datascience: [
       {
-        title: "Fat boy",
-        src: "https://www.youtube.com/embed/vAGYjHkUZbE?si=bvRro-TD8GLr628s",
+        title: "Data science road map",
+        src: "https://www.youtube.com/embed/PFPt6PQNslE?si=1_-lv58A3LzT3ipk",
       },
       {
-        title: "Courtroom Confrontation",
-        src: "https://www.youtube.com/embed/ej3ioOneTy8",
+        title: "Is data science a good career",
+        src: "https://www.youtube.com/embed/ax_NNtpSb0c?si=vy_7V8BAslAvzx4U",
       },
       {
-        title: "Grow Up",
-        src: "https://www.youtube.com/embed/dPuA0PsS67Q?si=FxwSudykyx4Ir6mF",
+        title: "What is data science",
+        src: "https://www.youtube.com/embed/uIUvpJdYgSA?si=5xOZ8A4RX0Qcsozm",
       },
       {
-        title: "Curser",
-        src: "https://www.youtube.com/embed/FIO4PlueHU4?si=Ps9nyiob7gx-SYYF",
+        title: "Data science vs Data analytics🔥",
+        src: "https://www.youtube.com/embed/dcXqhMqhZUo?si=uCIInZHk5frCYBHr",
       },
     ],
-    Documentary: [
+    MachineLearning: [
       {
-        title: "Wonders of the Ocean",
-        src: "https://www.youtube.com/embed/6zrn4-FfbXw",
+        title: "Machine learning Basics",
+        src: "https://www.youtube.com/embed/ukzFI9rgwfU?si=fZOLCuPxoC6EK6ZQ",
       },
       {
-        title: "Behind Bars",
-        src: "https://www.youtube.com/embed/BCmcx9QQNZ4?si=j_elcrNUIh29IGCB",
+        title: "Machine Learning tutorial",
+        src: "https://www.youtube.com/embed/gmvvaobm7eQ?si=t4_s9rywaB7-3wHk",
       },
       {
-        title: "Seven greatest hiddles",
-        src: "https://www.youtube.com/embed/ncOr6JSTMlw?si=BmZg8Ypf9-PglAMM",
+        title: "What is Machine Learning",
+        src: "https://www.youtube.com/embed/VWl8BaaXb8o?si=8zr7cla1O32W_e83",
       },
       {
-        title: "Fish Bombers",
-        src: "https://www.youtube.com/embed/jQ5h7lHukxk?si=0T5pM8jQOmVdOkbg",
+        title: "AI vs ML vs DL vs DS",
+        src: "hhttps://www.youtube.com/embed/k2P_pHQDlp0?si=Rn_jzNKDlG7uU3Qy",
+      },
+    ],
+    WebDevelelopment: [
+      {
+        title: "Fastest way to become a web developer",
+        src: "https://www.youtube.com/embed/NWnBxQjssvQ?si=V0RCXp_pqDWXs7vW",
+      },
+      {
+        title: "My Coding story",
+        src: "https://www.youtube.com/embed/eFJGyT3C-Y0?si=HM4hsAWObbdaTOeF",
+      },
+      {
+        title: "How to become a website designer",
+        src: "https://www.youtube.com/embed/P-Sg7WQlyLw?si=pMvCa6XxC53iWnGj",
+      },
+      {
+        title: "Web designer vs web developer",
+        src: "https://www.youtube.com/embed/3fHvTDr04Dc?si=CxLlnt0A_Fn6ifqp",
       },
     ],
   };
@@ -143,5 +149,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Load default videos (Action category)
   categoryButtons.querySelector(".btn").classList.add("active");
-  loadVideos("Action");
+  loadVideos("Python");
 });
