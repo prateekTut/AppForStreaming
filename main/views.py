@@ -54,7 +54,7 @@ def signup_view(request):
         if form.is_valid():
             print("form", form)
             form.save()  # Save the form data to the database
-            return redirect('home')  # Redirect to the 'home' page after successful signup
+            return redirect('login')  # Redirect to the 'home' page after successful signup
         else:
             # Debug: Print form errors to the console for inspection
             print(form.errors)
