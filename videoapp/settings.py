@@ -73,7 +73,15 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'videoapp.wsgi.application'
+CORS_ALLOWED_ORIGINS = [
+    "https://appforstreaming123.azurewebsites.net",
+]
 
+CSRF_TRUSTED_ORIGINS = ['https://appforstreaming123.azurewebsites.net']
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    "https://appforstreaming123.azurewebsites.net",
+]
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
